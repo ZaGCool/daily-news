@@ -4,6 +4,7 @@ import { BookOpen } from "lucide-react";
 import Link from "next/link";
 import Card from "./components/Card";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -17,7 +18,12 @@ export default function Home() {
       },
       body: JSON.stringify({ email }),
     });
-    console.log(await response.json());
+    try {
+      const data = await response.json();
+      toast.success(data.message);
+    } catch {
+      toast.error("Failed to subscribe.");
+    }
   };
 
   return (
