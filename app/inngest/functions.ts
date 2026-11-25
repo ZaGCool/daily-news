@@ -47,9 +47,9 @@ export const processTask = inngest.createFunction(
 export const sendDailyEmail = inngest.createFunction(
   {
     id: "send-daily-email",
-    // triggers: { event: "app/daily.email" },
+    triggers: { event: "app/daily.email" },
     // 使用 cron 触发器，每天 16:32（北京时间）执行一次。
-    triggers: { cron: "20 11 * * *", timezone: "Asia/Beijing" },
+    // triggers: { cron: "20 11 * * *", timezone: "Asia/Beijing" },
   },
   async ({ step }) => {
     // 使用 step.run 定义一个可持久化执行的步骤，生成每日新闻摘要。
