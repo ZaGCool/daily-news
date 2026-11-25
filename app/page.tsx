@@ -32,7 +32,12 @@ export default function Home() {
       <header className="flex items-center justify-between px-8 py-6 border-b border-gray-200">
         <div className="flex items-center gap-3">
           <BookOpen className="h-6 w-6 text-blue-500" />
-          <h1 className="text-2xl font-bold text-gray-900">Daily News</h1>
+          <h1 className="text-2xl font-bold text-gray-900">
+            Daily News
+            <span className="text-gray-500 text-sm">
+              &nbsp;&nbsp;&nbsp;&nbsp;By ZaG
+            </span>
+          </h1>
         </div>
         <nav className="flex items-center gap-6 mr-10 text-md">
           <Link href="/" className="hover:text-blue-600">

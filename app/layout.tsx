@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daily News",
+  title: "Daily News By ZaG",
   description: "Stay up-to-date with the latest news",
 };
 
